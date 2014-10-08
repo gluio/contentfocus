@@ -3,7 +3,7 @@
     "description": "Nesta CMS - a ruby CMS, now with Dropbox integration",
     "repository": "https://github.com/gluio/nestadrop",
     "env": {
-        "NESTADROP_KEY": {
+        "NDROP_KEY": {
             "description": "Automatically generated unique key",
             "generator": "secret"
         }

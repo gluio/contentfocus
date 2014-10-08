@@ -10,6 +10,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    mime-types (2.4.1)
     mr-sparkle (0.3.0)
       listen (~> 1.0)
       rb-fsevent (>= 0.9)
@@ -22,6 +23,7 @@ GEM
       rdiscount (~> 2.1)
       sass (>= 3.1)
       sinatra (~> 1.4)
+    netrc (0.7.7)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -32,6 +34,9 @@ GEM
     rb-kqueue (0.2.3)
       ffi (>= 0.5.0)
     rdiscount (2.1.7.1)
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sass (3.4.5)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -42,6 +47,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -49,3 +55,6 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta (= 0.10.0)
+  rest-client
+  unicorn
+  yajl-ruby
