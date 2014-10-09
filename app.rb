@@ -4,56 +4,72 @@ require "yajl"
 require 'fileutils'
 
 module Nesta
-  class App
-    helpers do
-      def nestadrop_configured?
-        return true if File.exists?("/tmp/.nestadropped")
-        false
-      end
+  module Plugin
+    module Drop
+      class Client
+        def self.confirm_linked!
+          return true if File.exists?("/tmp/.nestadropped")
+          File.open("/tmp/.nestadropped", "w+") do |f|
+            f.write "linked"
+          end
+        end
 
-      def setup_nestadrop
-        redirect to("http://nestadrop.herokuapp.com/?domain=#{request.host}&key=#{ENV["NDROP_KEY"]}")
-      end
+        def self.nestadrop_configured?
+          return true if File.exists?("/tmp/.nestadropped")
+          false
+        end
 
-      def check_nestadrop
-        return if request.path_info =~ %r{\A/nestadrop\z}
-        setup_nestadrop unless nestadrop_configured?
-      end
+        def self.files
+          files = RestClient.get "https://#{ENV["NDROP_KEY"]}:@nestadrop.herokuapp.com/files", { accept: :json }
+          Yajl::Parser.parse files
+        end
 
-      def nestadrop_request?
-        params["KEY"] == ENV["NDROP_KEY"]
-      end
+        def self.cache_file(file)
+          confirm_linked!
+          local_path = [Nesta::App.root, file].join("/")
+          STDOUT.puts "Writing out #{file} to #{local_path}"
+          FileUtils.mkdir_p(File.dirname(local_path))
+          File.open(local_path, 'w') do |fo|
+            fo.write open("https://nestadrop.herokuapp.com/file?file=#{file}",
+                           http_basic_authentication: [ENV["NDROP_KEY"], ""]).read
+          end
+        end
 
-      def dropbox_files
-        files = RestClient.get "https://#{ENV["NDROP_KEY"]}:@nestadrop.herokuapp.com/files", { accept: :json }
-        Yajl::Parser.parse files
-      end
+        def self.cache_files
+          Client.files.each do |file, status|
+            cache_file(file)
+          end
+        end
 
-      def confirm_linked!
-        File.open("/tmp/.nestadropped", "w+") do |f|
-          f.write "linked"
+        def self.bootstrap!
+          unless nestadrop_configured?
+            cache_files
+          end
         end
       end
 
-      def cache_dropbox_file(file)
-        local_path = [Nesta::App.root, file].join("/")
-        STDOUT.puts "Writing out #{file} to #{local_path}"
-        FileUtils.mkdir_p(File.dirname(local_path))
-        File.open(local_path, 'w') do |fo|
-          fo.write open("https://nestadrop.herokuapp.com/file?file=#{file}",
-                         http_basic_authentication: [ENV["NDROP_KEY"], ""]).read
+      module Helpers
+        def nestadrop_configured?
+          Client.nestadrop_configured?
         end
-      end
 
-      def fetch_dropbox_files
-        files = dropbox_files
-        confirm_linked!
-        files.each do |file, status|
-          cache_dropbox_file(file)
+        def setup_nestadrop
+          redirect to("http://nestadrop.herokuapp.com/?domain=#{request.host}&key=#{ENV["NDROP_KEY"]}")
+        end
+
+        def check_nestadrop
+          return if request.path_info =~ %r{\A/nestadrop\z}
+          setup_nestadrop unless nestadrop_configured?
+        end
+
+        def nestadrop_request?
+          params["KEY"] == ENV["NDROP_KEY"]
         end
       end
     end
-
+  end
+  class App
+    helpers Nesta::Plugin::Drop::Helpers
     before do
       check_nestadrop
     end
@@ -62,10 +78,16 @@ module Nesta
       if !nestadrop_request?
         status 404
       else
-        fetch_dropbox_files
+        if params["file"]
+          Nesta::Plugin::Drop::Client.cache_file(params["file"])
+        else
+          Nesta::Plugin::Drop::Client.cache_files
+        end
         status 200
         ""
       end
     end
   end
 end
+
+Nesta::Plugin::Drop::Client.bootstrap!
