@@ -22,12 +22,13 @@ module Nesta
         def self.files
           files = RestClient.get "https://#{ENV["NDROP_KEY"]}:@nestadrop.herokuapp.com/files", { accept: :json }
           Yajl::Parser.parse files
+        rescue RestClient::Unauthorized
+          return []
         end
 
         def self.cache_file(file)
           confirm_linked!
           local_path = [Nesta::App.root, file].join("/")
-          STDOUT.puts "Writing out #{file} to #{local_path}"
           FileUtils.mkdir_p(File.dirname(local_path))
           File.open(local_path, 'w') do |fo|
             fo.write open("https://nestadrop.herokuapp.com/file?file=#{file}",
