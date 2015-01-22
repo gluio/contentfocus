@@ -24,6 +24,8 @@ module Nesta
           Yajl::Parser.parse files
         rescue RestClient::Unauthorized
           return []
+        rescue RestClient::ResourceNotFound
+          return []
         end
 
         def self.cache_file(file)
