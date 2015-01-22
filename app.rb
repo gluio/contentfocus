@@ -42,6 +42,11 @@ module Nesta
           end
         end
 
+        def self.remove_file(file)
+          local_path = [Nesta::App.root, file].join("/")
+          FileUtils.rm_r(File.dirname(local_path), secure: true)
+        end
+
         def self.bootstrap!
           unless nestadrop_configured?
             cache_files
@@ -83,6 +88,18 @@ module Nesta
           Nesta::Plugin::Drop::Client.cache_file(params["file"])
         else
           Nesta::Plugin::Drop::Client.cache_files
+        end
+        status 200
+        ""
+      end
+    end
+
+    delete "/nestadrop" do
+      if !nestadrop_request?
+        status 404
+      else
+        if params["file"]
+          Nesta::Plugin::Drop::Client.remove_file(params["file"])
         end
         status 200
         ""
