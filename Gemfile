@@ -1,14 +1,10 @@
 source 'http://rubygems.org'
-ruby '2.1.3'
+ruby '2.2.0'
 
 gem 'nesta', '0.10.0'
+gem 'nestadrop', git: 'https://github.com/gluio/nestadrop.git'
 gem 'unicorn'
-gem 'rest-client'
-gem 'yajl-ruby'
-
 
 group :development do
   gem 'mr-sparkle'
 end
-
-# gem 'debugger'
