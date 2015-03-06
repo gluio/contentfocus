@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
+require 'rack/static'
 
 Bundler.require(:default)
 

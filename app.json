@@ -2,7 +2,7 @@
     "name": "NestaDrop",
     "description": "Nesta CMS - a ruby CMS, now with Dropbox integration",
     "repository": "https://github.com/gluio/nestadrop",
-    "logo": "",
+    "logo": "https://nestadrop.io/images/logo.png",
     "keywords": ["cms", "nesta", "dropbox"],
     "addons": ["nestadrop"]
 }
