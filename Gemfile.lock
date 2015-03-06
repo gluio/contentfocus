@@ -7,13 +7,28 @@ GIT
       rest-client
       yajl-ruby
 
+GIT
+  remote: https://github.com/gma/nesta.git
+  revision: 9b7b26dccdbf894991d0971793c5d3cc6b95d2ed
+  specs:
+    nesta (0.10.0)
+      RedCloth (~> 4.2)
+      haml (>= 3.1)
+      haml-contrib (>= 1.0)
+      rack (>= 1.3)
+      rdiscount (~> 2.1)
+      sass (>= 3.1)
+      sinatra (~> 1.4)
+
 GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
     ffi (1.9.6)
-    haml (4.0.6)
+    haml (4.1.0.beta.1)
       tilt
+    haml-contrib (1.0.0.1)
+      haml (>= 3.2.0.alpha.13)
     kgio (2.9.3)
     listen (1.3.1)
       rb-fsevent (>= 0.9.3)
@@ -25,13 +40,6 @@ GEM
       rb-fsevent (>= 0.9)
       rb-inotify (>= 0.8)
       unicorn (>= 4.5)
-    nesta (0.10.0)
-      RedCloth (~> 4.2)
-      haml (>= 3.1)
-      rack (>= 1.3)
-      rdiscount (~> 2.1)
-      sass (>= 3.1)
-      sinatra (~> 1.4)
     netrc (0.10.3)
     rack (1.6.0)
     rack-protection (1.5.3)
@@ -63,5 +71,6 @@ PLATFORMS
 
 DEPENDENCIES
   mr-sparkle
+  nesta!
   nesta-plugin-drop!
   unicorn
