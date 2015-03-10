@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/gluio/nesta-plugin-drop.git
-  revision: 2320031bd0329fee3420d318ea1046fbaf771910
+  revision: 0ad64e04dfe62b97ef7e32179b54d21a53911379
   specs:
     nesta-plugin-drop (0.0.1)
       nesta (>= 0.10.0)
