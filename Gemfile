@@ -3,7 +3,7 @@ ruby '2.2.0'
 
 gem 'nesta', git: 'https://github.com/gma/nesta.git'
 gem 'nesta-plugin-drop', git: 'https://github.com/gluio/nesta-plugin-drop.git'
-gem 'unicorn'
+gem 'puma', '~>2.11.0'
 
 group :development do
   gem 'mr-sparkle'

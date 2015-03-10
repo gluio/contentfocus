@@ -41,6 +41,8 @@ GEM
       rb-inotify (>= 0.8)
       unicorn (>= 4.5)
     netrc (0.10.3)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -73,4 +75,4 @@ DEPENDENCIES
   mr-sparkle
   nesta!
   nesta-plugin-drop!
-  unicorn
+  puma (~> 2.11.0)
