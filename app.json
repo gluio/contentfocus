@@ -4,5 +4,4 @@
     "repository": "https://github.com/gluio/nestadrop",
     "logo": "https://nestadrop.io/images/logo.png",
     "keywords": ["cms", "nesta", "dropbox"],
-    "addons": ["nestadrop"]
 }
