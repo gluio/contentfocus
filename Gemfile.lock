@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/gluio/nesta-plugin-drop.git
-  revision: 2914c80db8fd7c8180345b9e93e7876210e6db94
-  specs:
-    nesta-plugin-drop (0.0.1)
-      nesta (>= 0.10.0)
-      rest-client
-      yajl-ruby
-
-GIT
   remote: https://github.com/gma/nesta.git
   revision: 9b7b26dccdbf894991d0971793c5d3cc6b95d2ed
   specs:
@@ -40,6 +31,10 @@ GEM
       rb-fsevent (>= 0.9)
       rb-inotify (>= 0.8)
       unicorn (>= 4.5)
+    nesta-plugin-drop (0.0.1)
+      nesta (>= 0.10.0)
+      rest-client
+      yajl-ruby
     netrc (0.10.3)
     puma (2.11.1)
       rack (>= 1.1, < 2.0)
@@ -74,5 +69,5 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta!
-  nesta-plugin-drop!
+  nesta-plugin-drop (~> 0.0.1)
   puma (~> 2.11.0)
