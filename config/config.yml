@@ -19,7 +19,7 @@ subtitle: "(change this text in config/config.yml)"
 # easy to create or install, and live inside the themes directory. You
 # can also use scripts/theme to install them.
 #
-# theme: name-of-theme
+theme: median
 
 # If you want to use the Disqus service (http://disqus.com) to display
 # comments on your site, register a Disqus account and then specify your
