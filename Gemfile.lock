@@ -15,7 +15,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    ffi (1.9.6)
+    ffi (1.9.8)
     haml (4.1.0.beta.1)
       tilt
     haml-contrib (1.0.0.1)
@@ -31,7 +31,7 @@ GEM
       rb-fsevent (>= 0.9)
       rb-inotify (>= 0.8)
       unicorn (>= 4.5)
-    nesta-plugin-drop (0.0.1)
+    nesta-plugin-drop (0.0.2)
       nesta (>= 0.10.0)
       rest-client
       yajl-ruby
@@ -69,5 +69,5 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta!
-  nesta-plugin-drop (~> 0.0.1)
+  nesta-plugin-drop (~> 0.0.2)
   puma (~> 2.11.0)
