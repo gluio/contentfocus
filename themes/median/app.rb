@@ -1,7 +1,7 @@
 module Nesta
   class Page < FileModel
     def intro_image
-      return metadata('intro image') if metadata('intro image')
+      return metadata('Intro Image') if metadata('Intro Image')
       if self.parent
         image = Dir["#{File.dirname(__FILE__)}/public/median/images/cover*.jpg"].sample
         path = image.match("(/images/.*jpg)")[0]
