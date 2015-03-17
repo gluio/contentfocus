@@ -62,6 +62,6 @@ content: content
 #
 # Don't forget to uncomment the "production:" line too...
 
-production:
-  content: content
+# production:
+    content: /app/content
 #   google_analytics_code: "UA-???????-?"
