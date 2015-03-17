@@ -1,0 +1,16 @@
+- unless pages.empty?
+  %ol
+    - pages.each do |page|
+      %li
+        %article
+          %header
+            - if page.intro_image
+              %img.intro(src="#{page.intro_image}")
+            %h1
+              %a(href="#{path_to(page.abspath)}")= page.link_text
+          %p
+            - if page.summary.nil? || page.summary.empty?
+              = generate_summary(page.body(self))
+            - else
+              = generate_summary(page.summary)
+          = haml :page_meta, :layout => false, :locals => { :page => page }

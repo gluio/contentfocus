@@ -1,0 +1,235 @@
+$base-font-size: 22px;
+$base-color: rgba(0, 0, 0, 0.8);
+$heading-font-family: jaf-bernino-sans, 'Open Sans' 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+$body-font-family: freight-text-pro, Merriweather, Georgia, Cambria, 'Times New Roman', Times, serif;
+$link-color: rgb(77, 204, 75);
+
+body {
+  font-family: $body-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  color: $base-color;
+  letter-spacing: 0.16px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+a:hover {
+  color: darken($link-color, 20%);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-family: $heading-font-family;
+  font-weight: 700;
+  margin: 1.66em 0 0.83em;
+  a {
+    text-decoration: none;
+    color: $base-color;
+  }
+}
+
+h1, h2 {
+  font-size: $base-font-size * 1.64;
+  line-height: $base-font-size * 1.64 * 1.15;
+  letter-spacing: (-1 * (23/32))px;
+}
+
+h3, h4 {
+  font-size: $base-font-size * 1.46;
+  line-height: $base-font-size * 1.46 * 1.18;
+  letter-spacing: (-1 * (22/32))px;
+}
+
+p, ul li, ol li {
+  line-height: $base-font-size * 1.5;
+}
+
+ul li, ol li {
+  margin: 0.5em 0;
+}
+
+.container {
+  margin-bottom: 3em;
+}
+
+.articles {
+  ol {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+section.header {
+  height: 65px;
+  border-bottom: 1px solid #ddd;
+  h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+    line-height: 65px;
+  }
+}
+
+#content {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  h1, h2, h3, h4 {
+    text-align: center;
+  }
+
+  ul, ol {
+    margin: 1em 0;
+  }
+
+  section.articles {
+    header {
+      img.intro {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        overflow: hidden;
+      }
+    }
+    h1, h2, h3, h4 {
+      text-align: left;
+      margin: 0.2em 0;
+    }
+    p {
+      margin-top: 0.2em;
+      margin-bottom: 0;
+      font-size: 67%;
+      line-height: 1.7em;
+    }
+    footer {
+      margin: 0 0 3em;
+      font-size: 60%;
+      line-height: 1.6em;
+      color: rgba(120, 120, 120, 0.8);
+      .meta {
+        margin-top: 1em;
+      }
+
+      .more, .eta {
+        display: inline;
+      }
+      .more::after {
+        content: '·';
+      }
+      div.author {
+        float: left;
+        margin-right: 0.25em;
+        font-style: normal;
+        font-size: 100%;
+        margin-top: 0;
+      }
+
+    }
+  }
+  div.author {
+    margin-top: 2em;
+    color: rgba(120, 120, 120, 0.8);
+    font-size: 85%;
+    font-style: italic;
+  }
+}
+
+figure.intro {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  h1 {
+    font-size: 13vmin;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.1em;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+footer.branding {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  color: rgba(120, 120, 120, 0.8);
+  font-size: 15px;
+  line-height: 22px;
+
+  span.date::after {
+    content: '·';
+  }
+  span.categories {
+    float: right;
+    margin-right: 15px;
+
+    span.category {
+      &::after {
+        content: ', ';
+        text-decoration: none;
+      }
+      &:nth-last-child(2)::after {
+        content: ', or ';
+        text-decoration: none;
+      }
+      &:only-child::after, &:last-child::after {
+        content: '';
+        text-decoration: none;
+      }
+    }
+  }
+
+  div.nestadrop {
+    float: right;
+    margin-right: 15px;
+    font-size: 10px;
+    line-height: 11px;
+    .powered-by, .nestadrop {
+      float: right;
+      clear: both;
+    }
+    .powered-by {
+      font-style: italic;
+      font-size: 10px;
+    }
+    .nestadrop {
+      font-weight: 700;
+    }
+    a {
+      color: $base-color;
+      transition: color 0.5s;
+    }
+    a:hover {
+      color: rgb(159, 75, 203);
+    }
+  }
+}
+
+ul.menu {
+  list-style: none;
+}

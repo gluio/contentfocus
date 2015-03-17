@@ -1,0 +1,21 @@
+%footer.branding
+  - if @page
+    - if @page.metadata('author')
+      %span.author
+        %a(href="#{author_url(@page.metadata('author'))}")
+          = @page.metadata('author')
+    - if @page.date
+      %span.date
+        on
+        = format_date(@page.date)
+      %span.eta= reading_time(@page.body_markup)
+  .nestadrop
+    %a(href="https://nestadrop.io/")
+      %span.powered-by Powered by
+      %span.nestadrop NestaDrop
+  - unless @page.nil? || @page.categories.empty?
+    %span.categories
+      Read more in&nbsp;
+      - @page.categories.each do |category|
+        %span.category>
+          %a{ :href => category.abspath }>= category.heading

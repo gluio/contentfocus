@@ -1,0 +1,20 @@
+= haml :header, layout: false
+- if @page.intro_image
+  %figure.intro
+    %h1= @page.heading
+    %img(src="#{@page.intro_image}")
+#content
+  ~ @page.to_html(self)
+  - if @page.metadata('author')
+    .author
+      = author_biography
+  = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
+
+  - if @page.articles.empty?
+    - if @page.filename =~ %r{/pages/index\.md}
+      %section.articles= article_summaries(latest_articles)
+  - else
+    %section.articles
+      %h2= "Articles on #{@page.heading}"
+      = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
+= haml :footer, layout: false

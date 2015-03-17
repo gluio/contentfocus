@@ -1,0 +1,26 @@
+- if page.date
+  %footer
+    .meta
+      - if page.metadata('author')
+        .author
+          %a(href="#{author_url(page.metadata('author'))}")
+            = page.metadata('author')
+      - if page.date
+        .date
+          on
+          %time(datetime="#{page.date.to_s}" pubdate=true)= format_date(page.date)
+      - if (! page.categories.empty?)
+        .categories
+          In
+          - page.categories.each do |category|
+            - if category != page.categories[-1]
+              = succeed ',' do
+                %a(href="#{path_to(category.abspath)}")= category.link_text
+            - else
+              %a(href="#{path_to(category.abspath)}")= category.link_text
+      .more
+        %a(href="#{path_to(page.abspath)}")= page.read_more
+      .eta
+        = reading_time(page.body_markup)
+        read
+

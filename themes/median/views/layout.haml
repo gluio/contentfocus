@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %title= @title
+    %link(rel="stylesheet" type="text/css" href="/css/master.css")
+    - if ENV["TYPEKIT_KIT_ID"]
+      %script{ :type => "text/javascript", :src => "http://use.typekit.com/#{ENV["TYPEKIT_KIT_ID"]}.js" }
+      :javascript
+        try{Typekit.load();}catch(e){}
+    - else
+      %link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css")
+      %link(href="http://fonts.googleapis.com/css?family=Merriweather:300,400,700,300italic,400italic" rel="stylesheet" type="text/css")
+  %body
+    .container
+      = yield
