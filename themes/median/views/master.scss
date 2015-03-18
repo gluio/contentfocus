@@ -240,3 +240,25 @@ footer.branding {
 ul.menu {
   list-style: none;
 }
+
+blockquote {
+  display: block;
+  content: "\201C";
+  font-size: 300%;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
+
+  em:last-of-type {
+    display: block;
+    float: right;
+    margin: 1em 0;
+
+    &:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+}
