@@ -150,10 +150,6 @@ section.header {
         font-style: normal;
         font-size: 100%;
         margin-top: 0;
-
-        @media screen and (max-width: 580px) {
-          display: none;
-        }
       }
 
     }
@@ -205,6 +201,11 @@ footer.branding {
   font-size: 15px;
   line-height: 22px;
 
+
+  span.author {
+    @media screen and (max-width: 580px) {
+      display: none;
+  }
   span.date::after {
     content: '·';
   }
