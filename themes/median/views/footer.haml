@@ -15,7 +15,7 @@
       %span.nestadrop NestaDrop
   - unless @page.nil? || @page.categories.empty?
     %span.categories
-      Read more in&nbsp;
+      %span.read-more Read more in&nbsp;
       - @page.categories.each do |category|
         %span.category>
           %a{ :href => category.abspath }>= category.heading

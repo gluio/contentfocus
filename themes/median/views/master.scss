@@ -96,6 +96,12 @@ section.header {
   max-width: 700px;
   margin: 0 auto;
 
+  @media screen and (max-width: 730px) {
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
   h1, h2, h3, h4 {
     text-align: center;
   }
@@ -144,6 +150,10 @@ section.header {
         font-style: normal;
         font-size: 100%;
         margin-top: 0;
+
+        @media screen and (max-width: 580px) {
+          display: none;
+        }
       }
 
     }
@@ -165,8 +175,7 @@ figure.intro {
   h1 {
     font-size: 13vmin;
     position: absolute;
-    top: 50%;
-    transform: translateY(50%);
+    top: 35%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -174,6 +183,7 @@ figure.intro {
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     line-height: 1.1em;
+
   }
   img {
     width: 100%;
@@ -201,6 +211,12 @@ footer.branding {
   span.categories {
     float: right;
     margin-right: 15px;
+
+    span.read-more {
+      @media screen and (max-width: 470px) {
+        display: none;
+      }
+    }
 
     span.category {
       &::after {
@@ -252,7 +268,7 @@ blockquote {
   position: relative;
   color: lighten($base-color, 15%);
 
-  &:before {
+  &::before {
     display: block;
     content: "\201C";
     font-size: 300%;
@@ -268,7 +284,7 @@ blockquote {
     float: right;
     margin: 1em 0;
 
-    &:after {
+    &::after {
       display: block;
       clear: both;
       content: '';
