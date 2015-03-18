@@ -1,5 +1,11 @@
 module Nesta
   class Page < FileModel
+    def convert_to_html(format, scope, text)
+      text = add_p_tags_to_haml(text) if @format == :haml
+      template = Tilt[format].new(nil, 1, fenced_code_blocks: true) { text }
+      template.render(scope)
+    end
+
     def intro_image
       return metadata('Intro Image') if metadata('Intro Image')
       if self.parent
