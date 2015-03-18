@@ -205,6 +205,7 @@ footer.branding {
   span.author {
     @media screen and (max-width: 580px) {
       display: none;
+    }
   }
   span.date::after {
     content: '·';
