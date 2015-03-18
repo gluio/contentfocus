@@ -18,7 +18,6 @@ module Nesta
   end
 
   class App
-    use Rack::Static, urls: ["/median/"], root: "themes/median/public"
     helpers do
       def format_date(date)
         date.strftime("%d %b %Y")

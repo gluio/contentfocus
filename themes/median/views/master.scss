@@ -247,12 +247,12 @@ blockquote {
     content: "\201C";
     font-size: 300%;
     position: absolute;
-    left: -20px;
+    font-style: Georgia, serif;
+    left: -40px;
     top: -20px;
-    color: #7a7a7a;
   }
 
-  em:last-of-type {
+  p, em:last-of-type {
     display: block;
     float: right;
     margin: 1em 0;
