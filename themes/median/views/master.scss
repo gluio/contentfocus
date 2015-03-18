@@ -243,7 +243,7 @@ ul.menu {
 
 blockquote {
   position: relative;
-  color: lighten($base-color, 15%)
+  color: lighten($base-color, 15%);
 
   &:before {
     display: block;
@@ -253,7 +253,7 @@ blockquote {
     font-family: Georgia, serif;
     left: -40px;
     top: -20px;
-    color: lighten($base-color, 15%)
+    color: lighten($base-color, 15%);
   }
 
   p, em:last-of-type {
