@@ -3,9 +3,16 @@ module Nesta
     def intro_image
       return metadata('Intro Image') if metadata('Intro Image')
       if self.parent
-        image = Dir["#{File.dirname(__FILE__)}/public/median/images/cover*.jpg"].sample
-        path = image.match("(/images/.*jpg)")[0]
-        "/median#{path}"
+        images = %w[
+          https://dl.dropboxusercontent.com/u/2609971/cover001.jpg
+          https://dl.dropboxusercontent.com/u/2609971/cover002.jpg
+          https://dl.dropboxusercontent.com/u/2609971/cover003.jpg
+          https://dl.dropboxusercontent.com/u/2609971/cover004.jpg
+          https://dl.dropboxusercontent.com/u/2609971/cover005.jpg
+          https://dl.dropboxusercontent.com/u/2609971/cover006.jpg
+          https://dl.dropboxusercontent.com/u/2609971/cover007.jpg
+        ]
+        images.sample
       end
     end
   end
