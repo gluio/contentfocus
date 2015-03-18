@@ -61,6 +61,10 @@ code {
   border-radius: 3px;
 }
 
+pre > code {
+  display: block;
+}
+
 .container {
   margin-bottom: 3em;
 }
