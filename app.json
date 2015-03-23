@@ -3,5 +3,5 @@
     "description": "Manage web content via Dropbox, keep the flexibility of ruby",
     "repository": "https://github.com/gluio/nestadrop",
     "logo": "https://nestadrop.io/images/logo.png",
-    "keywords": ["cms", "nesta", "dropbox"],
+    "keywords": ["cms", "nesta", "dropbox"]
 }
