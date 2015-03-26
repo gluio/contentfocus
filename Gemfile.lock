@@ -30,7 +30,7 @@ GEM
       rdiscount (~> 2.1)
       sass (>= 3.1)
       sinatra (~> 1.4)
-    nesta-plugin-drop (0.0.10)
+    nesta-plugin-drop (0.0.11)
       nesta (>= 0.11.0)
       redcarpet (~> 3.2.2)
       rest-client
@@ -74,5 +74,5 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta
-  nesta-plugin-drop (~> 0.0.10)
+  nesta-plugin-drop (~> 0.0.11)
   puma (~> 2.11.0)
