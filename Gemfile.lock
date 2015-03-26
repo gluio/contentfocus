@@ -30,10 +30,11 @@ GEM
       rdiscount (~> 2.1)
       sass (>= 3.1)
       sinatra (~> 1.4)
-    nesta-plugin-drop (0.0.11)
+    nesta-plugin-drop (0.0.12)
       nesta (>= 0.11.0)
       redcarpet (~> 3.2.2)
       rest-client
+      tilt (~> 1.4.0)
       yajl-ruby
     netrc (0.10.3)
     puma (2.11.1)
@@ -74,6 +75,5 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta
-  nesta-plugin-drop (~> 0.0.11)
+  nesta-plugin-drop (~> 0.0.12)
   puma (~> 2.11.0)
-  tilt (~> 1.4.0)
