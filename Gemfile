@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 ruby '2.2.0'
 
 gem 'nesta'
-gem 'nesta-plugin-drop', '~>0.0.14'
+gem 'nesta-plugin-contentfocus', '~>0.0.16'
 gem 'puma', '~>2.11.0'
 
 group :development do

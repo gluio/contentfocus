@@ -1,7 +1,7 @@
 {
-    "name": "NestaDrop",
+    "name": "Content Focus",
     "description": "Manage web content via Dropbox, keep the flexibility of ruby",
-    "repository": "https://github.com/gluio/nestadrop",
-    "logo": "https://nestadrop.io/images/logo.png",
-    "keywords": ["cms", "nesta", "dropbox"]
+    "repository": "https://github.com/gluio/contentfocus",
+    "logo": "https://contentfocus.io/images/logo.png",
+    "keywords": ["cms", "content", "dropbox", "content focus", "contentfocus"]
 }
