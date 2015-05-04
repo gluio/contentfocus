@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    domain_name (0.5.23)
+    domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     ffi (1.9.8)
     haml (4.1.0.beta.1)
@@ -16,13 +16,13 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    mime-types (2.4.3)
+    mime-types (2.5)
     mr-sparkle (0.3.0)
       listen (~> 1.0)
       rb-fsevent (>= 0.9)
       rb-inotify (>= 0.8)
       unicorn (>= 4.5)
-    nesta (0.11.0)
+    nesta (0.11.1)
       RedCloth (~> 4.2)
       haml (>= 3.1)
       haml-contrib (>= 1.0)
@@ -30,14 +30,15 @@ GEM
       rdiscount (~> 2.1)
       sass (>= 3.1)
       sinatra (~> 1.4)
-    nesta-plugin-drop (0.0.14)
+      tilt (~> 1.4)
+    nesta-plugin-contentfocus (0.0.17)
       nesta (>= 0.11.0)
       redcarpet (~> 3.2.2)
       rest-client
       tilt (~> 1.4.0)
       yajl-ruby
     netrc (0.10.3)
-    puma (2.11.1)
+    puma (2.11.2)
       rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rack-protection (1.5.3)
@@ -46,10 +47,10 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rb-kqueue (0.2.3)
+    rb-kqueue (0.2.4)
       ffi (>= 0.5.0)
     rdiscount (2.1.8)
-    redcarpet (3.2.2)
+    redcarpet (3.2.3)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
@@ -62,8 +63,8 @@ GEM
     tilt (1.4.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.6)
-    unicorn (4.8.3)
+    unf_ext (0.0.7.1)
+    unicorn (4.9.0)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
@@ -75,5 +76,5 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta
-  nesta-plugin-drop (~> 0.0.14)
+  nesta-plugin-contentfocus (~> 0.0.17)
   puma (~> 2.11.0)
