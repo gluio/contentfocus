@@ -11,9 +11,10 @@ GIT
 
 GIT
   remote: https://github.com/gluio/nesta-theme-median.git
-  revision: 63801ea7594c8672192707dd4284d8bad3e87d69
+  revision: 2efcca57facbc96bedefde7188c6d9de41d0f3f3
   specs:
     nesta-theme-median (0.0.1)
+      nesta
 
 GEM
   remote: http://rubygems.org/
