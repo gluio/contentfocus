@@ -3,6 +3,7 @@ ruby '2.2.0'
 
 gem 'nesta'
 gem 'nesta-plugin-contentfocus', '~>0.0.17'
+gem 'nesta-theme-median', git: ''
 gem 'puma', '~>2.11.0'
 
 group :development do
