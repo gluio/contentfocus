@@ -2,6 +2,6 @@
     "name": "Content Focus",
     "description": "Manage web content via Dropbox, keep the flexibility of ruby",
     "repository": "https://github.com/gluio/contentfocus",
-    "logo": "https://contentfocus.io/images/logo.png",
+    "logo": "https://contentfocus.io/images/logo.button.png",
     "keywords": ["cms", "content", "dropbox", "content focus", "contentfocus"]
 }
