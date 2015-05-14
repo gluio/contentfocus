@@ -31,7 +31,7 @@ GEM
       sass (>= 3.1)
       sinatra (~> 1.4)
       tilt (~> 1.4)
-    nesta-plugin-contentfocus (0.0.19)
+    nesta-plugin-contentfocus (0.0.20)
       nesta (>= 0.11.0)
       redcarpet (~> 3.2.2)
       rest-client
@@ -78,6 +78,6 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta
-  nesta-plugin-contentfocus (~> 0.0.19)
+  nesta-plugin-contentfocus (~> 0.0.20)
   nesta-theme-median
   puma (~> 2.11.0)
