@@ -1,3 +1,22 @@
+GIT
+  remote: https://github.com/gluio/nesta-plugin-contentfocus.git
+  revision: e3887699a1bdf4ca98a2b05ceff716911f6e7f98
+  specs:
+    nesta-plugin-contentfocus (0.0.20)
+      nesta (>= 0.11.0)
+      redcarpet (~> 3.2.2)
+      rest-client
+      tilt (~> 1.4.0)
+      yajl-ruby
+
+GIT
+  remote: https://github.com/gluio/nesta-theme-median
+  revision: c4395bd86c8496dfee18f4d65c10bd008b41b3d4
+  specs:
+    nesta-theme-median (0.0.1)
+      nesta
+      redcarpet (~> 3.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -16,7 +35,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    mime-types (2.5)
+    mime-types (2.6.1)
     mr-sparkle (0.3.0)
       listen (~> 1.0)
       rb-fsevent (>= 0.9)
@@ -31,22 +50,14 @@ GEM
       sass (>= 3.1)
       sinatra (~> 1.4)
       tilt (~> 1.4)
-    nesta-plugin-contentfocus (0.0.20)
-      nesta (>= 0.11.0)
-      redcarpet (~> 3.2.2)
-      rest-client
-      tilt (~> 1.4.0)
-      yajl-ruby
-    nesta-theme-median (0.0.1)
-      nesta
     netrc (0.10.3)
-    puma (2.11.2)
+    puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
     raindrops (0.13.0)
-    rb-fsevent (0.9.4)
+    rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rb-kqueue (0.2.4)
@@ -57,7 +68,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.4.13)
+    sass (3.4.14)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -78,6 +89,6 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta
-  nesta-plugin-contentfocus (~> 0.0.20)
-  nesta-theme-median
+  nesta-plugin-contentfocus (~> 0.0.20)!
+  nesta-theme-median!
   puma (~> 2.11.0)
