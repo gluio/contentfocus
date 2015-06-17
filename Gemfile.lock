@@ -1,21 +1,24 @@
 GIT
   remote: https://github.com/gluio/nesta-plugin-contentfocus.git
-  revision: e3887699a1bdf4ca98a2b05ceff716911f6e7f98
+  revision: 0929a2853f343c50b78a11d4593b8ae2d6f61500
   specs:
     nesta-plugin-contentfocus (0.0.20)
+      encryptor (~> 1.3.0)
       nesta (>= 0.11.0)
+      pusher-client (~> 0.6.2)
       redcarpet (~> 3.2.2)
       rest-client
       tilt (~> 1.4.0)
+      websocket-native
       yajl-ruby
 
 GIT
   remote: https://github.com/gluio/nesta-theme-median
-  revision: c4395bd86c8496dfee18f4d65c10bd008b41b3d4
+  revision: 61e1d0ec12d3e6496f35cc64753d5aed9dab8dc4
   specs:
     nesta-theme-median (0.0.1)
       nesta
-      redcarpet (~> 3.1)
+      nesta-contentfocus-extensions
 
 GEM
   remote: http://rubygems.org/
@@ -23,6 +26,7 @@ GEM
     RedCloth (4.2.9)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
+    encryptor (1.3.0)
     ffi (1.9.8)
     haml (4.1.0.beta.1)
       tilt
@@ -30,6 +34,7 @@ GEM
       haml (>= 3.2.0.alpha.13)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
+    json (1.8.3)
     kgio (2.9.3)
     listen (1.3.1)
       rb-fsevent (>= 0.9.3)
@@ -50,10 +55,17 @@ GEM
       sass (>= 3.1)
       sinatra (~> 1.4)
       tilt (~> 1.4)
+    nesta-contentfocus-extensions (0.0.1)
+      nesta (>= 0.11.0)
+      redcarpet (~> 3.2.2)
+      tilt (~> 1.4.0)
     netrc (0.10.3)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
-    rack (1.6.1)
+    pusher-client (0.6.2)
+      json
+      websocket (~> 1.0)
+    rack (1.6.2)
     rack-protection (1.5.3)
       rack
     raindrops (0.13.0)
@@ -81,6 +93,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    websocket (1.2.2)
+    websocket-native (1.0.0)
     yajl-ruby (1.2.1)
 
 PLATFORMS
