@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/gluio/nesta-contentfocus-extensions.git
+  revision: acd26c4e85dbb844e4b20a7c9c2b0aaa9da8c37d
+  specs:
+    nesta-contentfocus-extensions (0.0.1)
+      nesta (>= 0.11.0)
+      pygments.rb (~> 0.6.3)
+      redcarpet (~> 3.2.2)
+      tilt (~> 1.4.0)
+
+GIT
   remote: https://github.com/gluio/nesta-plugin-contentfocus.git
   revision: 0929a2853f343c50b78a11d4593b8ae2d6f61500
   specs:
@@ -55,16 +65,16 @@ GEM
       sass (>= 3.1)
       sinatra (~> 1.4)
       tilt (~> 1.4)
-    nesta-contentfocus-extensions (0.0.1)
-      nesta (>= 0.11.0)
-      redcarpet (~> 3.2.2)
-      tilt (~> 1.4.0)
     netrc (0.10.3)
+    posix-spawn (0.3.11)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.6.2)
     rack-protection (1.5.3)
       rack
@@ -103,6 +113,7 @@ PLATFORMS
 DEPENDENCIES
   mr-sparkle
   nesta
+  nesta-contentfocus-extensions!
   nesta-plugin-contentfocus (~> 0.0.20)!
   nesta-theme-median!
   puma (~> 2.11.0)
