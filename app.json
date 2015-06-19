@@ -3,5 +3,6 @@
     "description": "A beautiful CMS that lets you focus on your content",
     "repository": "https://github.com/gluio/contentfocus",
     "logo": "https://contentfocus.io/images/logo.button.png",
-    "keywords": ["cms", "content", "dropbox", "content focus", "contentfocus"]
+    "keywords": ["cms", "content", "dropbox", "content focus", "contentfocus"],
+    "addons" : ["contentfocus"]
 }
