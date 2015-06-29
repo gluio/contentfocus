@@ -1,16 +1,18 @@
 GIT
   remote: https://github.com/gluio/nesta-contentfocus-extensions.git
-  revision: acd26c4e85dbb844e4b20a7c9c2b0aaa9da8c37d
+  revision: 992dd32212b01dfd2565d449372c4c8b18ca8885
   specs:
     nesta-contentfocus-extensions (0.0.1)
       nesta (>= 0.11.0)
       pygments.rb (~> 0.6.3)
       redcarpet (~> 3.2.2)
+      sass_paths (~> 1.0.1)
+      sinatra-flash (~> 0.3.0)
       tilt (~> 1.4.0)
 
 GIT
   remote: https://github.com/gluio/nesta-plugin-contentfocus.git
-  revision: 0929a2853f343c50b78a11d4593b8ae2d6f61500
+  revision: 702ed5a21312ab812a46a7bae2478bfc6cfdf1fc
   specs:
     nesta-plugin-contentfocus (0.0.20)
       encryptor (~> 1.3.0)
@@ -24,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/gluio/nesta-theme-median
-  revision: 4a5e3df3e5cd1668ce2735bef051a03c34228f24
+  revision: d3507dea6dfbb95f5c5757cea979b9bb10cb523c
   specs:
     nesta-theme-median (0.0.1)
       nesta
@@ -37,7 +39,6 @@ GEM
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     encryptor (1.3.0)
-    ffi (1.9.8)
     haml (4.1.0.beta.1)
       tilt
     haml-contrib (1.0.0.1)
@@ -45,17 +46,7 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     json (1.8.3)
-    kgio (2.9.3)
-    listen (1.3.1)
-      rb-fsevent (>= 0.9.3)
-      rb-inotify (>= 0.9)
-      rb-kqueue (>= 0.2)
     mime-types (2.6.1)
-    mr-sparkle (0.3.0)
-      listen (~> 1.0)
-      rb-fsevent (>= 0.9)
-      rb-inotify (>= 0.8)
-      unicorn (>= 4.5)
     nesta (0.11.1)
       RedCloth (~> 4.2)
       haml (>= 3.1)
@@ -75,34 +66,28 @@ GEM
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
-    rack (1.6.2)
+    rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    raindrops (0.13.0)
-    rb-fsevent (0.9.5)
-    rb-inotify (0.9.5)
-      ffi (>= 0.5.0)
-    rb-kqueue (0.2.4)
-      ffi (>= 0.5.0)
     rdiscount (2.1.8)
     redcarpet (3.2.3)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.4.14)
+    sass (3.4.15)
+    sass_paths (1.0.1)
+      sass (~> 3.2)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     tilt (1.4.1)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
-    unicorn (4.9.0)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
     websocket (1.2.2)
     websocket-native (1.0.0)
     yajl-ruby (1.2.1)
@@ -111,7 +96,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  mr-sparkle
   nesta
   nesta-contentfocus-extensions!
   nesta-plugin-contentfocus (~> 0.0.20)!
