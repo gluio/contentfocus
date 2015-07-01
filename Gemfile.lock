@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/gluio/nesta-theme-median
-  revision: d0bc81a86a695b7b52245d0909b2d05004f0f9e1
+  revision: c3a3fda719310956aa96f829089c00a16bbded2b
   specs:
     nesta-theme-median (0.0.1)
       nesta
