@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/gluio/nesta-contentfocus-extensions.git
-  revision: 362130030036a427294f28faa7730ff8c63da880
+  revision: ade36bd6221d23e378516eec4d837a9c82f6c9cb
   specs:
     nesta-contentfocus-extensions (0.0.1)
       nesta (>= 0.11.0)
