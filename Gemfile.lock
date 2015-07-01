@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/gluio/nesta-contentfocus-extensions.git
-  revision: 98a0ff4ecc43d81bac8d6f845578f6a692779f96
+  revision: a8673fc8a2a4bf7d8972d814db82b83b84acd066
   specs:
     nesta-contentfocus-extensions (0.0.1)
       nesta (>= 0.11.0)
@@ -12,7 +12,7 @@ GIT
 
 GIT
   remote: https://github.com/gluio/nesta-plugin-contentfocus.git
-  revision: 3087ee5cb0d1c80cec554b8073c3295bb1300ce2
+  revision: 4e748e56b49809ef92e18af2e5822a8b5a272d0f
   specs:
     nesta-plugin-contentfocus (0.0.20)
       encryptor (~> 1.3.0)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/gluio/nesta-theme-median
-  revision: d3507dea6dfbb95f5c5757cea979b9bb10cb523c
+  revision: d0bc81a86a695b7b52245d0909b2d05004f0f9e1
   specs:
     nesta-theme-median (0.0.1)
       nesta
