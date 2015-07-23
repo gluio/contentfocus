@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/gluio/nesta-contentfocus-extensions.git
-  revision: febf032f3a4e9fbab8840262859bc8a9ccfc4039
+  revision: 33f9fc821e5cc4004a9b61025d66f88c6d0479ca
   specs:
-    nesta-contentfocus-extensions (0.0.1)
+    nesta-contentfocus-extensions (0.0.3)
+      kramdown (~> 1.5.0)
       nesta (>= 0.11.0)
-      pygments.rb (~> 0.6.3)
-      redcarpet (~> 3.2.2)
+      rouge (~> 1.9.1)
       sass_paths (~> 1.0.1)
       sinatra-flash (~> 0.3.0)
       tilt (~> 1.4.0)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/gluio/nesta-theme-median
-  revision: c3a3fda719310956aa96f829089c00a16bbded2b
+  revision: ef0afe30ea286c35a2d469a5e9d92bf4b3759c1c
   specs:
     nesta-theme-median (0.0.1)
       nesta
@@ -46,6 +46,7 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     json (1.8.3)
+    kramdown (1.5.0)
     mime-types (2.6.1)
     nesta (0.11.1)
       RedCloth (~> 4.2)
@@ -57,15 +58,11 @@ GEM
       sinatra (~> 1.4)
       tilt (~> 1.4)
     netrc (0.10.3)
-    posix-spawn (0.3.11)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
-    pygments.rb (0.6.3)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -75,7 +72,8 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    sass (3.4.15)
+    rouge (1.9.1)
+    sass (3.4.16)
     sass_paths (1.0.1)
       sass (~> 3.2)
     sinatra (1.4.6)
