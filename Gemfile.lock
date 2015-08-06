@@ -1,18 +1,22 @@
 GIT
   remote: https://github.com/gluio/nesta-contentfocus-extensions.git
-  revision: 9ed3ebc361a1a3aa5e71f7d9927e0a157def3a51
+  revision: 72c337722dd20788f7feffcf8421091e882e49d3
   specs:
     nesta-contentfocus-extensions (0.0.3)
+      gemoji-parser (~> 1.3.1)
       kramdown (~> 1.5.0)
       nesta (>= 0.11.0)
       rouge (~> 1.9.1)
+      sass (~> 3.4.16)
       sass_paths (~> 1.0.1)
       sinatra-flash (~> 0.3.0)
+      sprockets (~> 3.2.0)
       tilt (~> 1.4.0)
+      uglifier (~> 2.7.1)
 
 GIT
   remote: https://github.com/gluio/nesta-plugin-contentfocus.git
-  revision: 4e748e56b49809ef92e18af2e5822a8b5a272d0f
+  revision: cf740a8cd9af6c38d1657ac11021fcf80c678011
   specs:
     nesta-plugin-contentfocus (0.0.20)
       encryptor (~> 1.3.0)
@@ -39,6 +43,10 @@ GEM
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     encryptor (1.3.0)
+    execjs (2.5.2)
+    gemoji (2.1.0)
+    gemoji-parser (1.3.1)
+      gemoji (>= 2.1.0)
     haml (4.1.0.beta.1)
       tilt
     haml-contrib (1.0.0.1)
@@ -82,7 +90,12 @@ GEM
       tilt (>= 1.3, < 3)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
+    sprockets (3.2.0)
+      rack (~> 1.0)
     tilt (1.4.1)
+    uglifier (2.7.1)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
