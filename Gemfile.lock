@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gluio/nesta-contentfocus-extensions.git
-  revision: 8be5d3731c313da0fdf6d05f21e0cec5645f7510
+  revision: da794a19a50009584a35d03a9ed0810bd8f4fae3
   specs:
     nesta-contentfocus-extensions (0.0.3)
       gemoji-parser (~> 1.3.1)
